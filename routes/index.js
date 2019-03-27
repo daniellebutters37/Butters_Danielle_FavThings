@@ -27,7 +27,7 @@ router.get('/:band', function(req, res, next) {
       console.log(err);
     } else {
       console.log(result);
-      res.render('band', { bioData: result[0] });
+      res.render('band', { bandData: result[0] });
     }
   });
 });
