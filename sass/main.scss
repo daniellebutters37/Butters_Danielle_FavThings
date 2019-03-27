@@ -1,5 +1,130 @@
 @import '_vars';
-@import 'modules/_home';
-@import 'modules/_bio';
 
-a { text-decoration: none; color: white; text-transform: uppercase; }
+html {
+    background-color: white;
+}
+
+a { 
+    text-decoration: none; 
+    color: white; 
+}
+
+.hidden {
+    display: none;
+}
+
+h1 {
+    font-family: $font-title;
+    text-align: center;
+    font-size: 3em;
+}
+
+p, h2, h3 {
+    font-family: $font-main;
+    color: $font-color;
+    letter-spacing: 1.5px;
+}
+
+//--------------------------INDEX
+
+#bands {
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+.bandContainer {
+    margin: 0 auto;
+}
+
+.bandName{
+    width: 100%;
+    background: $white;
+    background: -moz-linear-gradient(top, $white 50%, $yellow 50%, $yellow 50%);
+    background: -webkit-linear-gradient(top, $white 50%, $yellow 50%, $yellow 50%); 
+    background: linear-gradient(to bottom, $white 50%, $yellow 50%, $yellow 50%); 
+}
+
+@media (min-width: $desktop-width) {
+    #bands {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-gap: 1em;
+    }
+}
+
+
+
+//--------------------------BANDS
+
+
+.bandSelName {
+    margin-left: 10%;
+    width: 80%;
+    background: $yellow;
+    background: -moz-linear-gradient(top, $white 50%, $yellow 50%);
+    background: -webkit-linear-gradient(top, $white 50%, $yellow 50%); 
+    background: linear-gradient(to bottom, $white 50%, $yellow 50%); 
+}
+
+#bandInfo {
+    display: grid;
+    padding: 0 10% 0 10%;
+}
+
+.bio{
+    grid-column: 1/2;
+    grid-row: 1;
+    text-align: justify;
+    margin-bottom: 5%;
+    padding-bottom: 3%;
+    border-bottom: solid $font-color 0.5px;
+}
+
+.album{
+    grid-column: 1/2;
+    grid-row: 2;
+    width: 80%;
+    margin-bottom: 5%;
+    border-bottom: solid $font-color 0.5px;
+    padding-bottom: 10%;
+}
+
+.song{
+    grid-column: 1/2;
+    grid-row: 3;
+    width: 300px;
+    margin: 0 auto;
+}
+
+@media (min-width: $desktop-width) {
+    .bandSelName {
+        margin-left: 5%;
+        width: 90%;
+    }
+
+    .bio{
+        grid-column: 1/3;
+        grid-row: 1;
+        text-align: justify;
+        margin-bottom: 5%;
+        padding-bottom: 3%;
+        border-bottom: solid $font-color 0.5px;
+    }
+
+    .album{
+        grid-column: 1;
+        grid-row: 2;
+        width: 80%;
+        border-bottom: none;
+        img {
+            width: 250px;
+            margin: 0 auto;
+        }
+    }
+
+    .song{
+        grid-column: 2;
+        grid-row: 2;
+        width: 500px;
+    }
+}

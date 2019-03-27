@@ -1,6 +1,17 @@
-<h1>{{bioData.name}}</h1>
-<p>Fav Album: {{bioData.album}}</p>
-<img src="/images/{{bioData.album_img}}" alt="band images">
-<p>{{bioData.bio}}</p>
-<p>Fav Song: {{bioData.song}}</p>
-<iframe width="560" height="315" src="{{bioData.song_url}}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<h2 class="bandSelName">{{bandData.name}}</h2>
+<div id="bandInfo">
+    <div class="bio">
+        <h3>Bio:</h3>
+        <p>{{bandData.bio}}</p>
+    </div>
+    <div class="album">
+        <h3>Fav Album:</h3>
+        <p> {{bandData.album}}</p>
+        <img src="/images/{{bandData.album_img}}" alt="band images">
+    </div>
+    <div class="song">
+        <h3>Fav Song:</h3>
+        <p>{{bandData.song}}</p>
+        <iframe width="100%" height="100%" src="{{bandData.song_url}}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+</div>
