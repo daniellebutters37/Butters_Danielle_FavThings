@@ -1,11 +1,11 @@
-<section id="heros">
-    {{#each avatars}}
-        <div class="hero-container">
+<section id="bands">
+    {{#each band_img}}
+        <div class="band-container">
             <a href="/{{name}}">
-                <img src ="/images/{{avatar}}" alt="avatar">
+                <img src ="/images/{{band_img}}" alt="avatar">
             </a>
 
-            <h3 class="hero-name">{{name}}</h3>
+            <h3 class="band-name">{{name}}</h3>
         </div>
 
     {{/each}}
